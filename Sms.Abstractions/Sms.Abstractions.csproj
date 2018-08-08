@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+
+		<PackageId>Sms.Abstractions</PackageId>
+		<Authors>Altinok Darici</Authors>
+		<Description>Abstraction classes and interfaces for SMS implementations</Description>
+		<RepositoryUrl>https://github.com/altinokdarici/sms-clients</RepositoryUrl>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageReleaseNotes>First release</PackageReleaseNotes>
+		<PackageTags>Sms, Messaging</PackageTags>
+	</PropertyGroup>
+
+</Project>
