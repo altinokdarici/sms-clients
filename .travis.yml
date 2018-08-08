@@ -6,5 +6,5 @@ script:
     - dotnet pack Sms.IletiMerkezi/Sms.IletiMerkezi.csproj -c Release /p:Version=1.0.$TRAVIS_BUILD_NUMBER -o ../output/nupkg/
     - dotnet pack Sms.PostaGuvercini/Sms.PostaGuvercini.csproj -c Release /p:Version=1.0.$TRAVIS_BUILD_NUMBER -o ../output/nupkg/
     - pwd
-    - ls ../output/nupkgs/
-    - for fn in `find ../output/nupkgs/ -name "*.nupkg"`; do  dotnet nuget push $fn -k $NUGET_KEY -s https://api.nuget.org/v3/index.json  done
+    - ls /home/travis/build/altinokdarici/sms-clients/output/nupkgs/
+    - for fn in `find /home/travis/build/altinokdarici/sms-clients/output/nupkgs/ -name "*.nupkg"`; do  dotnet nuget push $fn -k $NUGET_KEY -s https://api.nuget.org/v3/index.json  done
