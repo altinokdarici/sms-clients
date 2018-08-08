@@ -6,4 +6,4 @@ script:
     - dotnet pack Sms.IletiMerkezi/Sms.IletiMerkezi.csproj -c Release /p:Version=1.0.$TRAVIS_BUILD_NUMBER -o ../output/nupkg/
     - dotnet pack Sms.PostaGuvercini/Sms.PostaGuvercini.csproj -c Release /p:Version=1.0.$TRAVIS_BUILD_NUMBER -o ../output/nupkg/
     - ls output/nupkg/ 
-    - for fn in `find output/nupkg/ -name "*.nupkg"`; do  dotnet nuget push $fn -k $NUGET_KEY -s https://api.nuget.org/v3/index.json  done
+    - for fn in $(ls output/nupkg/); do  dotnet nuget push $fn -k $NUGET_KEY -s https://api.nuget.org/v3/index.json  done
