@@ -15,7 +15,7 @@ namespace Sms.PostaGuvercini
 		{
 			httpClient = new HttpClient()
 			{
-				BaseAddress = new Uri("http://www.postaguvercini.com/api_http/")
+				BaseAddress = new Uri(smsSettings.Url+ "/api_http/")
 			};
 			this.smsSettings = smsSettings;
 		}
